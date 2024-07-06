@@ -11,14 +11,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mohannandigam/wdio.git"
+    "url": "https://github.com/mohannandigam/wdio.git"
   },
   "author": "Mohan Krishna Nandigam",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mohannandigam/wdio/issues"
-  },
-  "homepage": "https://github.com/mohannandigam/wdio#readme",
   "devDependencies": {
     "@wdio/allure-reporter": "^8.39.0",
     "@wdio/cli": "^8.39.1",

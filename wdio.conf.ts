@@ -60,8 +60,8 @@ export const config: Options.Testrunner = {
     //
     capabilities: [{
         browserName: 'chrome'
-    }, {
-        browserName: 'safari'
+    // }, {
+    //     browserName: 'safari'
     }],
 
     //
