@@ -39,6 +39,7 @@ bower_components
 build/Release
 
 # Dependency directories
+allure-results/
 node_modules/
 jspm_packages/
 

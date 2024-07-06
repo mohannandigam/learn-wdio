@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/mohannandigam/wdio#readme",
   "devDependencies": {
+    "@wdio/allure-reporter": "^8.39.0",
     "@wdio/cli": "^8.39.1",
     "@wdio/local-runner": "^8.39.1",
     "@wdio/mocha-framework": "^8.39.0",
