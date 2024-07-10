@@ -6,3 +6,4 @@ screenshots
 reports
 .DS_Store
 wdio-safaridriver.log
+logs

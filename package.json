@@ -2,11 +2,12 @@
   "name": "wdio",
   "version": "1.0.0",
   "description": "Mohan's Automation testing with Webdriverio",
-  "main": "index.js",
+  "main": "index.ts",
   "directories": {
     "test": "test"
   },
   "scripts": {
+    "winston": "node logger.ts",
     "clean": "rm -rf allure-results",
     "wdio": "wdio run ./wdio.conf.ts"
   },
@@ -24,5 +25,8 @@
     "@wdio/spec-reporter": "^8.39.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "winston": "^3.13.0"
   }
 }
