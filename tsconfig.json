@@ -9,6 +9,8 @@
         ],
         "types": [
             "node",
+            "mocha",
+            "chai",
             "@wdio/globals/types",
             "expect-webdriverio",
             "@wdio/mocha-framework"
