@@ -2,11 +2,7 @@
     "compilerOptions": {
         "moduleResolution": "node",
         "module": "CommonJS",
-        "target": "ES2022",
-        "lib": [
-            "ES2022",
-            "dom"
-        ],
+        "target": "ES2023",
         "types": [
             "node",
             "mocha",
