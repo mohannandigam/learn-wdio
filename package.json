@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "clean:allure": "rm -rf allure-results",
+    "clean:allure:results": "rm -rf allure-results",
     "wdio": "wdio run ./wdio.conf.ts"
   },
   "repository": {
