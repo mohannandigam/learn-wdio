@@ -5,13 +5,18 @@
         "target": "ES2023",
         "types": [
             "node",
-            "mocha",
             "@wdio/globals/types",
             "expect-webdriverio",
             "@wdio/mocha-framework"
         ],
+        "skipLibCheck": true,
+        "noEmit": true,
+        "allowImportingTsExtensions": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
         "strict": true,
-        "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true
     },
 }
