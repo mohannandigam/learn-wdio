@@ -2,7 +2,6 @@ node_modules
 debug.log
 allure-results
 allure-report
-screenshots
 reports
 .DS_Store
 wdio-safaridriver.log

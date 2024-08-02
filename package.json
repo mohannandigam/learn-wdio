@@ -1,18 +1,12 @@
 {
   "name": "wdio",
   "version": "1.0.0",
-  "description": "Mohan's Automation testing with Webdriverio",
   "main": "index.ts",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
     "clean:allure:results": "rm -rf allure-results",
-    "wdio": "wdio run ./wdio.conf.ts"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mohannandigam/wdio.git"
+    "wdio": "wdio run ./wdio.conf.ts",
+    "google": "wdio run ./wdio.conf.ts  --suite google",
+    "home" : "wdio run ./wdio.conf.ts  --suite home"
   },
   "author": "Mohan Krishna Nandigam",
   "license": "ISC",
