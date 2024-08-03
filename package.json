@@ -5,6 +5,7 @@
   "scripts": {
     "clean:allure:results": "rm -rf allure-results",
     "wdio": "wdio run ./wdio.conf.ts",
+    "sausedemo": "wdio run ./wdio.conf.ts  --suite sausedemo",
     "google": "wdio run ./wdio.conf.ts  --suite google",
     "home": "wdio run ./wdio.conf.ts  --suite home",
     "mocha": "wdio run ./wdio.conf.ts  --suite mocha"

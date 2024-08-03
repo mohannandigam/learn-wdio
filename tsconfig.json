@@ -2,7 +2,7 @@
     "compilerOptions": {
         "moduleResolution": "node",
         "module": "CommonJS",
-        "target": "ES2023",
+        "target": "ESNext",
         "types": [
             "node",
             "@wdio/globals/types",

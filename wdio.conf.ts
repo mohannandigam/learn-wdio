@@ -20,6 +20,7 @@ export const config: Options.Testrunner = {
     google: ["./test/specs/google.ts"],
     home: ["./learn/home.ts"],
     mocha: ["./learn/mocha.ts"],
+    sausedemo: ["./learn/sausedemo.ts"],
   },
 
   exclude: [
@@ -50,9 +51,17 @@ export const config: Options.Testrunner = {
   capabilities: [
     {
       browserName: "chrome",
-      // }, {
-      //     browserName: 'safari'
+      "goog:chromeOptions": {
+        args: [
+          //"headless",
+          "disable-extensions",
+          "disable-gpu",
+        ],
+      },
     },
+    // {
+    //   browserName: 'safari'
+    // },
   ],
 
   //
