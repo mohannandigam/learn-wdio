@@ -1,4 +1,4 @@
-import { logger } from "../../shared/logger";
+import { logger } from "../shared/logger";
 
 describe("Navigate to Youtube Home Page", () => {
   it("should navigate to Youtube Home Page", () => {

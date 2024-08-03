@@ -6,7 +6,8 @@
     "clean:allure:results": "rm -rf allure-results",
     "wdio": "wdio run ./wdio.conf.ts",
     "google": "wdio run ./wdio.conf.ts  --suite google",
-    "home" : "wdio run ./wdio.conf.ts  --suite home"
+    "home": "wdio run ./wdio.conf.ts  --suite home",
+    "mocha": "wdio run ./wdio.conf.ts  --suite mocha"
   },
   "author": "Mohan Krishna Nandigam",
   "license": "ISC",
