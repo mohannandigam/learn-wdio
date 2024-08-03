@@ -1,5 +1,5 @@
 # wdio
-Mohan's Repo to learn Automation with webdriverio, code written in typescrip
+Mohan's Repo to learn Automation with webdriverio, code written in typescript
 
-for logiing, winston: 
+for logging, Winston: 
   to install: npm i express winston
