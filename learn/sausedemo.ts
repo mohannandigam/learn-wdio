@@ -13,5 +13,9 @@ describe("Sauce demo login", () => {
     await login.click();
     await browser.pause(3000);
     logger.info("Login successful");
+    const title: any = await browser.waitUntil((): any => {
+      return browser.getTitle();
+    });
+    logger.info('Title = ' + title);
   });
 });
