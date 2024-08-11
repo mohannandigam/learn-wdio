@@ -1,4 +1,4 @@
-import { logger } from "../shared/logger";
+import { logger } from "../../shared/logger";
 
 describe("Sauce demo login", () => {
   it("should login with valid user", async () => {

@@ -18,9 +18,9 @@ export const config: Options.Testrunner = {
 
   suites: {
     google: ["./test/specs/google.ts"],
-    home: ["./learn/home.ts"],
-    mocha: ["./learn/mocha.ts"],
-    sausedemo: ["./learn/sausedemo.ts"],
+    home: ["./learn/wdio/home.ts"],
+    mocha: ["./learn/wdio/mocha.ts"],
+    sausedemo: ["./learn/wdio/sausedemo.ts"],
   },
 
   exclude: [
