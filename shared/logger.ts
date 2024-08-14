@@ -6,7 +6,7 @@ export const logger = winston.createLogger({
   format: combine(
     colorize({ all: true }),
     timestamp({
-      format: "hh:mm:ss.SSS A YYYY-MM-DD ",
+      format: "hh:mm:ss.SSS A YYYY-MM-DD",
     }),
     align(),
     printf(
@@ -14,5 +14,8 @@ export const logger = winston.createLogger({
         `[${info.timestamp}] ${info.level}: ${info.message}`
     )
   ),
-  transports: [new winston.transports.Console({ level: "info" })],
+  transports: [
+    new winston.transports.Console({ level: "info" }),
+    new winston.transports.File({ filename: "logs/info.log" }),
+  ],
 });

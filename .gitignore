@@ -4,3 +4,4 @@ allure-report
 reports
 .DS_Store
 wdio-safaridriver.log
+logs
