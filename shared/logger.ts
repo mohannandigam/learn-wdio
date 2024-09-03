@@ -6,7 +6,7 @@ export const logger = winston.createLogger({
   format: combine(
     colorize({ all: true }),
     timestamp({
-      format: "hh:mm:ss.SSS A YYYY-MM-DD",
+      format: "YYYY-MM-DD hh:mm:ss.SSS A",
     }),
     align(),
     printf(
