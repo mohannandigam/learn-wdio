@@ -13,10 +13,10 @@
   "author": "Mohan Krishna Nandigam",
   "license": "ISC",
   "devDependencies": {
-    "@wdio/allure-reporter": "^9.0.4",
-    "@wdio/cli": "^9.0.7",
-    "@wdio/local-runner": "^9.0.7",
-    "@wdio/mocha-framework": "^9.0.6",
+    "@wdio/allure-reporter": "^9.0.8",
+    "@wdio/cli": "^9.0.9",
+    "@wdio/local-runner": "^9.0.9",
+    "@wdio/mocha-framework": "^9.0.8",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
   },
