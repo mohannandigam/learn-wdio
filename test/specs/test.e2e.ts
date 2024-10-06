@@ -9,7 +9,7 @@ describe("My Login application", () => {
     logger.info("Login page opened");
     await LoginPage.login("tomsmith", "SuperSecretPassword!");
     await expect(SecurePage.flashAlert).toBeExisting();
-    await expect(SecurePage.flashAlert).toHaveTextContaining(
+    await expect(SecurePage.flashAlert).toHaveText(
       "You logged into a secure area!"
     );
     logger.info("Login successful");

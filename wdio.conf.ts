@@ -1,19 +1,27 @@
-import type { Options } from "@wdio/types";
-export const config: Options.Testrunner = {
+export const config: WebdriverIO.Config = {
   //
   // ====================
   // Runner Configuration
   // ====================
   // WebdriverIO supports running e2e tests as well as unit and component tests.
   runner: "local",
-  autoCompileOpts: {
-    autoCompile: true,
-    tsNodeOpts: {
-      project: "./tsconfig.json",
-      transpileOnly: true,
-    },
-  },
+  tsConfigPath: "./tsconfig.json",
 
+  //
+  // ==================
+  // Specify Test Files
+  // ==================
+  // Define which test specs should run. The pattern is relative to the directory
+  // of the configuration file being run.
+  //
+  // The specs are defined as an array of spec files (optionally using wildcards
+  // that will be expanded). The test for each spec file will be run in a separate
+  // worker process. In order to have a group of spec files run in the same worker
+  // process simply enclose them in an array within the specs array.
+  //
+  // The path of the spec files will be resolved relative from the directory of
+  // of the config file unless it's absolute.
+  //
   specs: ["./test/specs/**/*.ts"],
 
   suites: {
@@ -22,7 +30,7 @@ export const config: Options.Testrunner = {
     mocha: ["./learn/wdio/mocha.ts"],
     sausedemo: ["./learn/wdio/sausedemo.ts"],
   },
-
+  // Patterns to exclude.
   exclude: [
     // 'path/to/excluded/files'
   ],
@@ -50,7 +58,8 @@ export const config: Options.Testrunner = {
   //
   capabilities: [
     {
-      browserName: "chrome",
+      // capabilities for local browser web tests
+      browserName: "chrome", // or "firefox", "microsoftedge", "safari"
       "goog:chromeOptions": {
         args: [
           //"headless",
@@ -76,7 +85,7 @@ export const config: Options.Testrunner = {
   // Set specific log levels per logger
   // loggers:
   // - webdriver, webdriverio
-  // - @wdio/browserstack-service, @wdio/devtools-service, @wdio/sauce-service
+  // - @wdio/browserstack-service, @wdio/lighthouse-service, @wdio/sauce-service
   // - @wdio/mocha-framework, @wdio/jasmine-framework
   // - @wdio/local-runner
   // - @wdio/sumologic-reporter
@@ -237,8 +246,15 @@ export const config: Options.Testrunner = {
    * @param {boolean} result.passed    true if test has passed, otherwise false
    * @param {object}  result.retries   information about spec related retries, e.g. `{ attempts: 0, limit: 0 }`
    */
-  // afterTest: function(test, context, { error, result, duration, passed, retries }) {
-  // },
+  afterTest: async function (
+    test,
+    context,
+    { error, result, duration, passed, retries }
+  ) {
+    if (!passed) {
+      await browser.takeScreenshot();
+    }
+  },
 
   /**
    * Hook that gets executed after the suite has ended
