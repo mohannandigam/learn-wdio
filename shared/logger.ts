@@ -11,7 +11,7 @@ export const logger = winston.createLogger({
     align(),
     printf(
       (info: { timestamp: any; level: any; message: any }) =>
-        `[${info.timestamp}] ${info.level}: ${info.message}`
+        `${info.level}: [${info.timestamp}]${info.message}`
     )
   ),
   transports: [
